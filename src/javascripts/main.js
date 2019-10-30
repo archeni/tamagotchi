@@ -1,8 +1,8 @@
 import '../styles/main.scss';
-import eat from './eat';
-import play from './play';
-import fight from './fight';
-import sleep from './sleep';
+import eat from './components/eat';
+import play from './components/play';
+import fight from './components/fight';
+import sleep from './components/sleep';
 
 eat.eatPrinter();
 play.playPrinter();

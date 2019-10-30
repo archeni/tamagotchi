@@ -1,4 +1,5 @@
-import print from './components/utilities';
+import print from '../helper/utilities';
+import '../../styles/eat.scss';
 
 const eatPrinter = () => {
   let stringDom = '';
@@ -25,6 +26,17 @@ const eatPrinter = () => {
       console.log(full);
     }
   });
+  const fullnessBarReduction = () => {
+    if (full - 7 >= 0) {
+      full -= 7;
+      document.getElementById('fullProgress').value = full;
+    }
+  };
+  const hunger = () => {
+    setInterval(fullnessBarReduction, 20000);
+  };
+
+  hunger();
 };
 
 export default { eatPrinter };

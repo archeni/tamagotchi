@@ -1,0 +1,14 @@
+#play {
+  position: fixed;
+  width: 50%;
+  height: 50%;
+  top: 0;
+  right: 0;
+  background-color: darkorange;
+  text-align: center;
+  .playInfo {
+    #funProgress {
+      width: 500px;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+#sleep {
+  position: fixed;
+  width: 50%;
+  height: 50%;
+  bottom: 0;
+  right: 0;
+  background-color: darkorchid;
+  text-align: center;
+  .sleepInfo {
+    #energyProgress {
+      width: 500px;
+    }
+  }
+}
