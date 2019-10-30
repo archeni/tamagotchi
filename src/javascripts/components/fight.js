@@ -1,9 +1,10 @@
-import print from './components/utilities';
+import print from '../helper/utilities';
+import '../../styles/fight.scss';
 
 const fightPrinter = () => {
   let stringDom = '';
   let strength = 100;
-  stringDom += `<div class="fightInfo"><h2>Eat</h2> 
+  stringDom += `<div class="fightInfo"><h2>Fight</h2> 
   <button id="excorcise" type="button">Tactical Retreat</button> 
   <button id="villain" type="button">Steal Candy from a Baby</button> 
   <p><progress value="${strength}" max="100" id="strengthProgress"></progress></p></div>`;
@@ -25,6 +26,16 @@ const fightPrinter = () => {
       console.log(strength);
     }
   });
-};
+  const readyToFightBarReduction = () => {
+    if (strength + 3 <= 0) {
+      strength += 3;
+      document.getElementById('strengthProgress').value = strength;
+    }
+  };
+  const readyToFight = () => {
+    setInterval(readyToFightBarReduction, 10000);
+  };
 
+  readyToFight();
+};
 export default { fightPrinter };

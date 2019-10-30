@@ -1,0 +1,14 @@
+#eat {
+  position: fixed;
+  width: 50%;
+  height: 50%;
+  top: 0;
+  left: 0;
+  background-color: limegreen;
+  text-align: center;
+  .eatInfo {
+    #fullProgress {
+      width: 500px;
+    }
+  }
+}

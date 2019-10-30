@@ -1,4 +1,5 @@
-import print from './components/utilities';
+import print from '../helper/utilities';
+import '../../styles/play.scss';
 
 const playPrinter = () => {
   let stringDom = '';
@@ -25,6 +26,16 @@ const playPrinter = () => {
       console.log(fun);
     }
   });
-};
+  const unfunBarReduction = () => {
+    if (fun - 13 >= 0) {
+      fun -= 13;
+      document.getElementById('funProgress').value = fun;
+    }
+  };
+  const unfun = () => {
+    setInterval(unfunBarReduction, 40000);
+  };
 
+  unfun();
+};
 export default { playPrinter };
